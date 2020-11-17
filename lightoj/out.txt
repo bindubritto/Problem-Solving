@@ -1,0 +1,13 @@
+Case 1:
+http://uva.onlinejudge.org/
+http://topcoder.com/
+http://uva.onlinejudge.org/
+http://www.lightoj.com/
+Ignored
+http://uva.onlinejudge.org/
+http://acm.sgu.ru/
+http://uva.onlinejudge.org/
+http://www.lightoj.com/
+http://acm.sgu.ru/
+Ignored
+Ignored
