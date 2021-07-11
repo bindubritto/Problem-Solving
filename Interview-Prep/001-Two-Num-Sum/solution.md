@@ -26,7 +26,6 @@ Just using two for loops to check the sum.
 using namespace std;
 
 vector<int> twoNumberSum(vector<int> array, int targetSum) {
-
     vector<int>res;
     int size = array.size()-1;
 
@@ -36,8 +35,7 @@ vector<int> twoNumberSum(vector<int> array, int targetSum) {
                 if(array[i]<array[j]){
                     res.push_back(array[i]);
                     res.push_back(array[j]);
-    			}
-				else {
+    			} else {
 					res.push_back(array[j]);
 					res.push_back(array[i]);
 				}
@@ -48,3 +46,5 @@ vector<int> twoNumberSum(vector<int> array, int targetSum) {
 }
 
 ```
+
+Hello Hello
