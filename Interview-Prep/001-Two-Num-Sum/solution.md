@@ -10,4 +10,42 @@ Write a function that takes in a non-empty array of distinct integers and an int
 
 ## Output
 
+```sh
 [-1, 11]
+```
+
+## Solution 01
+
+Using O(n^2) time and O(1) space since no auxiliary structures are created.
+Just using two for loops to check the sum.
+
+## Code
+
+```sh
+#include <vector>
+using namespace std;
+
+vector<int> twoNumberSum(vector<int> array, int targetSum) {
+
+	vector<int>res;
+	int size = array.size()-1;
+	
+    for(int i=0;i<size;i++){
+		for(int j=i+1;j<array.size();j++){
+			if((array[i] + array[j])==targetSum){
+				if(array[i]<array[j]){
+					res.push_back(array[i]);
+					res.push_back(array[j]);
+				}
+				else{
+					res.push_back(array[j]);
+					res.push_back(array[i]);
+				}
+			}
+		}
+	}
+	
+	return res;
+}
+
+```
