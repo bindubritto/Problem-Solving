@@ -35,10 +35,7 @@ vector<int> twoNumberSum(vector<int> array, int targetSum) {
                 if(array[i]<array[j]){
                     res.push_back(array[i]);
                     res.push_back(array[j]);
-    			} else {
-					res.push_back(array[j]);
-					res.push_back(array[i]);
-				}
+    			}
 			}
 		}
 	}
