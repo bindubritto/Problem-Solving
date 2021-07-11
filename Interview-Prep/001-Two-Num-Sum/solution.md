@@ -65,4 +65,30 @@ vector<int> twoNumberSum(vector<int> array, int targetSum) {
 }
 ```
 
-Hello Hello
+## Solution 02
+
+This solution using hash tables. Here, X + Y = Sum, So, Y = Sum - X.
+So, if we try to find Y in our hash table, we will find our solution. So, the approach is, if Y is in the hash_table? If no, then push X in the hash_table
+and mark it as true. And if yes, then we'll just return X & Y. So, here the lookup is O(1) in hash_table, and O(n) for only traversing the array.
+
+So, total time complexity is O(n), also O(n) for space complexity as we're using hash_tables.
+
+```cpp
+
+#include<vector>
+#include<unordered_set>
+using namespace std;
+
+vector<int> twoNumberSum(vector<int>array, int targetSum){
+	unordered_set<int> nums;
+	for (int num : array) {
+		int potentialMatch = targetSum - num;
+		if(nums.find(potentialMatch) != nums.end()){
+			return vector<int>{potentialMatch, num};
+		} else {
+			nums.insert(num);
+		}
+	}
+	return {};
+}
+```
