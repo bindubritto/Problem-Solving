@@ -92,3 +92,38 @@ vector<int> twoNumberSum(vector<int>array, int targetSum){
 	return {};
 }
 ```
+
+## Solution - 03
+
+But we can do it in a very efficient and intuitive way. We'll sort the array first, then we'll use two pointer.
+One from left side, one from right. If sum of these pointer is greater than the targetSum, then we'll decrease right pointer and
+if lesser than increase left pointer.
+
+So, O(nlogn) for sorting & O(n) for traverse. So, O(nlogn) will be the time complexity. And there is no additional space here. So, O(1) is
+space complexity.
+
+```cpp
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+vector<int> twoNumberSum(vector<int>array, int targetSum){
+	sort(array.begin(), array.end());
+	int leftIdx = 0;
+	int rightIdx = array.size() - 1;
+
+	for (int num : array) {
+		int potentialSum = array[leftIdx] + array[rightIdx];
+		if(potentialSum == targetSum){
+			return vector<int>{parray[leftIdx],  array[rightIdx]};
+		} else if( potentialSum > targetSum) {
+			rightIdx--;
+		} else {
+			leftIdx++;
+		}
+	}
+	return {};
+}
+```
+
+That's all for this problem.
