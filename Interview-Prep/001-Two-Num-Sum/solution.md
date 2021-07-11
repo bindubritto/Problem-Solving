@@ -31,12 +31,7 @@ vector<int> twoNumberSum(vector<int> array, int targetSum) {
 
     for(int i=0;i<size;i++){
         for(int j=i+1;j<array.size();j++){
-            if((array[i] + array[j])==targetSum){
-                if(array[i]<array[j]){
-                    res.push_back(array[i]);
-                    res.push_back(array[j]);
-    			}
-			}
+			// comment
 		}
 	}
 	return res;
