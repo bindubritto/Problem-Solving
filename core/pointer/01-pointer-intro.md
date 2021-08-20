@@ -16,7 +16,7 @@ And in computer there is a lookup table, where we map variable name to it's type
 
 Below image is saying more than this writing things
 
-![Pointer-01](../images/ptr1.png?raw=true "Memory architechture")
+![Pointer-01](../../images/ptr1.png?raw=true "Memory architechture")
 
 Okay Cool. But can we know the address of any variable in memory or can we work with this address?
 
@@ -53,4 +53,4 @@ print(*p); // 5, gives us value at address
 
 Last line is called dereferencing. Below image is enough, I guess.
 
-![Pointer-02](../images/ptr2.png?raw=true "Pointer architechture")
+![Pointer-02](../../images/ptr2.png?raw=true "Pointer architechture")
