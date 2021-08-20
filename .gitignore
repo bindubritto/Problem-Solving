@@ -1,1 +1,7 @@
 .vscode
+
+lightoj/*.o
+lightoj/*.exe
+
+core/pointer/*.o
+core/pointer/*.exe

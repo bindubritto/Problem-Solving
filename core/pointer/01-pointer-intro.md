@@ -48,7 +48,7 @@ print(a); // 5
 print(&a); // 204
 print(p); // 204, gives us address
 print(&p); // 64
-print(*p); // 5, gives us value at address
+print(*p); // 5, gives us value at address pointed by p
 ```
 
 Last line is called dereferencing. Below image is enough, I guess.
