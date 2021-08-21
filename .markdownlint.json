@@ -3,5 +3,6 @@
         "indent": 2
     },
     "MD010": false,
-    "MD013": false
+    "MD013": false,
+    "MD029": false
 }
