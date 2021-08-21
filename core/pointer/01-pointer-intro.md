@@ -31,6 +31,7 @@ Syntax
 ```cpp
 int a; // normal variable declare.Let, address of a is 204
 int *p; // Pointer varialbe declare. Let, address of p is 64
+int* p; // Both are same
 
 a = 5; // normal value assign
 p = &a; // pointer value assign, & (ampersend return address)
