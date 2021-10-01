@@ -14,6 +14,6 @@ We can classify sorting algorithms by different parameter, such as
 
 1. Time Complexity
 2. Space Complexity or Memory usage (In place or use extra memory)
-3. Stability (if the key is equal then if any element comes first in the original list, will come first in the sorted list too)
+3. Stability (if the key is equal then which element comes first in the original list, will come first in the sorted list too)
 4. Internal vs External Sort
 5. Recursive or Non-recursive

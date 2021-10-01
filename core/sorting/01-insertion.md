@@ -1,3 +1,0 @@
-# Insertion Sort
-
-## Coming Soon
