@@ -43,3 +43,17 @@ int main()
     return 0;
 }
 ```
+
+## Time and Space Complexity
+
+- image
+
+### Time Complexity
+
+- Best Case - O(n^2)
+- Average Case - O(n^2)
+- Worst Case - O(n^2)
+
+### Space Complexity
+
+- Space complexity - O(1)
