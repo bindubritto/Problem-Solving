@@ -2,6 +2,8 @@
 
 lightoj/*.o
 lightoj/*.exe
+lightoj/*.app
+lightoj/test.app
 
 core/pointer/*.o
 core/pointer/*.exe

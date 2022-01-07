@@ -1,5 +1,8 @@
 #include<stdio.h>
-#include<bits/stdc++.h>
+#include<algorithm>
+#include<queue>
+#include<string>
+#include<iostream>
 using namespace std;
 
 int main()
