@@ -115,7 +115,7 @@ vector<int> twoNumberSum(vector<int>array, int targetSum){
 	while (leftIdx < rightIdx) {
 		int potentialSum = array[leftIdx] + array[rightIdx];
 		if(potentialSum == targetSum){
-			return vector<int>{parray[leftIdx],  array[rightIdx]};
+			return vector<int>{array[leftIdx],  array[rightIdx]};
 		} else if( potentialSum > targetSum) {
 			rightIdx--;
 		} else {
