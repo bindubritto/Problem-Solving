@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
 
-    // Suboptimal - O(NlogN) time - O(1) Space
+    // Suboptimal - O(NlogN) time - O(1) Space || Intuition & Logic(according to problem-set)
     int majorityElement(vector<int>nums) {
         sort(nums.begin(), nums.end());
         return nums[nums.size()/2];
@@ -32,6 +32,8 @@ public:
 
 int main()
 {
+    freopen("out.txt", "w", stdout);
+
     Solution sln;
 
     vector<int>v{2, 2, 1, 1, 1, 2, 2};
