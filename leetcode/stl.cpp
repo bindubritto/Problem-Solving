@@ -7,10 +7,66 @@
 
 using namespace std;
 
+std::vector<long long>prefixHash;
+int base = 26;
+
+void calculatePrefixHash(string &str1) {
+    prefixHash.resize(str1.size() + 1, 0);
+    prefixHash[0] = str1[0]; // char converted to ascii value.
+    for(int i = 1; i < str1.size(); i++) {
+        prefixHash[i] = prefixHash[i - 1] * base;
+        prefixHash[i] = prefixHash[i] + str1[i];
+    }
+}
+
+long long generateHash(string &str){
+    long long h = 0;
+    string temp = "";
+    for( auto s : str) {
+        h = ( h * base ) + s;
+        temp += s;
+        cout<<temp<<" "<<h<<"\n";
+    }
+
+    return h;
+}
+
+
+
+
 int main()
 {
     // freopen("in.txt", "r", stdin);
     freopen("out.txt", "w", stdout);
+
+    string str1 = "abcde";
+
+    // cout<<s1[0]<<"\n";
+
+    // vector<long long>hash;
+
+    // hash.resize(6, 0);
+
+    // hash[0] = s1[0];
+
+    // cout<<typeid(hash[0]).name()<<endl;
+
+    // cout<<hash[0]<<endl;
+
+    // for(int i = 0; i< 255; i++){
+    //     // int b = 'a' + i;
+    //     // cout<< (char)i << " " << i<<"\n";
+    // }
+
+    calculatePrefixHash(str1);
+    string str = "bc";
+    generateHash(str);
+
+    for(int i = 0; i < str1.size(); i++){
+        // int b = 'a' + i;
+        // cout<< (char)i << " " << i<<"\n";
+        // cout<<str1[i]<< " "<< prefixHash[i] << "\n";
+    }
 
     // Vector
 
@@ -46,13 +102,13 @@ int main()
     // s.erase(10);
     // cout << s.count(10) << endl;
 
-    map<int, int> freq;
+    // map<int, int> freq;
 
-    freq[5];
-    freq[4]++;
-    freq[3];
-    freq[2];
-    freq[1]++;
+    // freq[5];
+    // freq[4]++;
+    // freq[3];
+    // freq[2];
+    // freq[1]++;
 
     // auto it = freq.begin();
     // pair<int, int> p = *it;
@@ -64,9 +120,9 @@ int main()
     //     // cout<<it->first << " " << it->second << endl;
     // }
 
-    for( pair<int, int> x:freq) {
-        cout<<x.first << " " << x.second<<endl;
-    }
+    // for( pair<int, int> x:freq) {
+    //     cout<<x.first << " " << x.second<<endl;
+    // }
     
     return 0;
 }
