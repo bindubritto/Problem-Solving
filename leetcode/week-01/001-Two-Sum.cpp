@@ -6,7 +6,6 @@ using namespace std;
 
 class Solution {
     public:
-
         // Optimal | O(n) space, O(n) time
         vector<int> twoSum(vector<int>nums, int target) {
             unordered_map<int, int> seen;
@@ -28,7 +27,7 @@ int main() {
 
     Solution sln;
 
-    vector<int> res = sln.twoSum({2,7,11,15}, 9);
+    vector<int> res = sln.twoSum({2,7,11,15}, 18);
 
     cout<<res[0]<<"\n";
     cout<<res[1]<<"\n";
