@@ -6,7 +6,7 @@ using namespace std;
 
 class Solution {
 public:
-    // Sub optimal | Space - O(n) | Time - O(n) // Index hashing, existance checking.
+    // Sub optimal | Space - O(n) | Time - O(n) // Existance checking.
     int firstMissingPositive1(vector<int>nums) {        
         unordered_set<int> bucket(nums.begin(), nums.end());
         for(int i = 1; i<= nums.size() + 1; i++){
@@ -17,23 +17,26 @@ public:
         return 0;
     }
 
-    // Optimal |  Time - O(n) | Space - O(n) // Put each number in its right place.
-    int firstMissingPositive2(vector<int>& nums)
-    {
-        int n=nums.size();
-        for(int i=0;i<n;i++)
+    // Optimal |  Time - O(n) | Space - O(1) // Index Hashing Technique, value wise index er value k -ve kore disi. Jodi positive pai, means oi index + 1 er value
+    // ta exist korto na.
+    int firstMissingPositive2(vector<int>& nums) {
+        if (find(nums.begin(), nums.end(), 1) == nums.end()) return 1;
+        for (int i = 0; i < nums.size(); i++)
         {
-            while(nums[i]>0 && nums[i]<=n && nums[nums[i]-1] != nums[i]){
-                swap(nums[i],nums[nums[i]-1]);
-            }
+            nums[i] = max(1, nums[i]);
         }
-        
-        for(int i=0;i<n;i++)
+        for(int i = 0; i < nums.size(); i++)
         {
-            if(nums[i]!=i+1)
-                return i+1;
+            int index = abs(nums[i]) - 1;
+            if(index < nums.size() && nums[index] > 0) {
+                nums[index] = -nums[index];
+            }   
         }
-        return n+1;
+        for(int i = 0; i < nums.size(); i++)
+        {
+            if(nums[i] > 0) return i + 1;
+        }
+        return nums.size() + 1;
     }
 
 };
