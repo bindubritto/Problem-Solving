@@ -50,7 +50,7 @@ int strStr(string haystack, string needle) {
 }
 
 int main() {
-    freopen("out.txt", "w", stdout);
+    // freopen("out.txt", "w", stdout);
 
     string haystack = "abcde";
     string needle = "bc";
