@@ -19,3 +19,5 @@ core/pointer/*.exe
 *.dll
 *.so
 *.dylib
+
+.DS_Store
